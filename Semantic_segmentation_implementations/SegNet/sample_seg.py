@@ -42,7 +42,7 @@ print("\n\n\n......Training......\n\n\n")
 for Epoch in range(10):
 
     for idx,data in enumerate(dsets_enqueuer_training,1):
-        print("\nTrain image number = ", idx, end=".....\n")
+        print("\nTrain image number = ", idx, ".....\n")
         image,image_seg = data['image'], data['image_seg']
         #print("imageSize = ", image.size())
         if torch.cuda.is_available():
@@ -62,7 +62,7 @@ for Epoch in range(10):
 
         loss_data += loss.data
         #print ("Epoch {0} /10, loss = {1}".format(Epoch,loss_data))
-        with open('/Users/crohan009/Documents/Stuff/CS/Deep_Learning/NYUAutonomous/Semantic_segmentation_implementations/SegNet/saved_model_weights/model_save.pth.tar', 'wb') as f: 
+        with open('model_save.pth.tar', 'wb') as f: 
             torch.save(model_ft, f)
         
 
