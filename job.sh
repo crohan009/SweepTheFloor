@@ -10,7 +10,7 @@
 #SBATCH --mail-type=END
 ##SBATCH --mail-user=rc3232@nyu.edu
 #SBATCH --output=slurm_%j.out
-#SBATCH --gres=gpu:2
+#SBATCH --gres=gpu:1
 
 module purge
 module load python/intel/2.7.12
