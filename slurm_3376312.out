@@ -1,0 +1,22 @@
+
+
+
+......Training......
+Traceback (most recent call last):
+  File "sample_seg.py", line 60, in <module>
+    output = model_ft(image)
+  File "/share/apps/pytorch/0.2.0_1/lib/python2.7/site-packages/torch/nn/modules/module.py", line 224, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/scratch/rc3232/SegNet/segnet_model.py", line 165, in forward
+    out1, indices1, size1= self.layer1(x)
+  File "/share/apps/pytorch/0.2.0_1/lib/python2.7/site-packages/torch/nn/modules/module.py", line 224, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/scratch/rc3232/SegNet/segnet_model.py", line 42, in forward
+    fwd_map = self.conv1(x)
+  File "/share/apps/pytorch/0.2.0_1/lib/python2.7/site-packages/torch/nn/modules/module.py", line 224, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/share/apps/pytorch/0.2.0_1/lib/python2.7/site-packages/torch/nn/modules/conv.py", line 254, in forward
+    self.padding, self.dilation, self.groups)
+  File "/share/apps/pytorch/0.2.0_1/lib/python2.7/site-packages/torch/nn/functional.py", line 52, in conv2d
+    return f(input, weight, bias)
+RuntimeError: CUDNN_STATUS_NOT_SUPPORTED. This error may appear if you passed in a non-contiguous input.
